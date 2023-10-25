@@ -1,0 +1,63 @@
+voici une évaluation des avantages et inconvénients de chacun de ces algorithmes :
+
+A*:
+
+    + Avantages:
+Optimal: Trouve toujours le chemin le plus court s'il existe.
+Efficient: Grâce à l'utilisation de l'heuristique, il peut souvent explorer moins de nœuds que Dijkstra pour trouver le chemin le plus court.
+    + Inconvénients:
+Heuristique: Nécessite une heuristique pour guider la recherche. Si l'heuristique n'est pas admissible, l'algorithme peut ne pas être optimal.
+Complexité: Peut devenir lent sur de grands espaces ou avec une heuristique pauvre.
+
+
+Dijkstra:
+
+    + Avantages:
+Optimal: Trouve toujours le chemin le plus court s'il existe.
+Général: Ne nécessite pas d'heuristique comme A*.
+    + Inconvénients:
+Lent: Sans heuristique pour guider la recherche, il peut explorer de nombreux nœuds inutilement dans certaines situations.
+
+
+RRT (Rapidly-exploring Random Tree):
+
+    + Avantages:
+Efficace pour les espaces de haute dimension: Contrairement aux approches basées sur la grille, RRT peut gérer efficacement les espaces de haute dimension.
+Adaptable: Peut être adapté à de nombreuses situations et topologies d'espace.
+     Inconvénients:
+Non-optimal: Ne garantit généralement pas de trouver le chemin le plus court, mais plutôt un chemin faisable.
+Aléatoire: En raison de sa nature aléatoire, les performances peuvent varier.
+
+
+
+
+D*:
+
+    + Avantages:
+Dynamique: Peut s'adapter efficacement aux changements dans l'environnement sans recalculer l'intégralité du chemin.
+Optimal: Comme A* et Dijkstra, il trouve le chemin le plus court.
+    + Inconvénients:
+Complexité: Plus complexe à implémenter que A* ou Dijkstra.
+
+
+
+Breadth-First Search (BFS) sur une grille discretisée:
+
+    + Avantages:
+Simplicité: Facile à comprendre et à coder.
+Complet: Si une solution existe, BFS la trouvera.
+    + Inconvénients:
+Non-optimal en termes de distance: Trouve un chemin en termes de "sauts" sur la grille, et non en termes de distance réelle.
+Peut être lent: Surtout sur de grands espaces, car il explore de manière exhaustive.
+Lors du choix d'un algorithme, il est important de prendre en compte la nature spécifique de votre problème, la taille de votre espace de recherche, 
+et d'autres contraintes spécifiques à votre application.
+
+
+////////////////////
+
+Heuristique: C'est une sorte d'estimation ou de "raccourci" qui guide un algorithme de recherche pour qu'il soit plus rapide. Dans le contexte d'A*, 
+l'heuristique est une fonction qui estime le coût restant pour atteindre l'objectif depuis un nœud donné. L'heuristique doit être choisie soigneusement: 
+une heuristique qui sous-estime le coût réel est "admissible" et garantit que A* trouve un chemin optimal, mais si elle sur-estime le coût, alors A* 
+pourrait ne pas être optimal. Une heuristique couramment utilisée pour la planification de chemin sur une grille est la distance euclidienne 
+(ou la distance de Manhattan dans les grilles où seules les mouvements verticaux et horizontaux sont autorisés) entre le nœud actuel et le nœud cible.
+

@@ -2,10 +2,13 @@ package eseo.pfe.sc_ihm.GUI;
 
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.fragment.app.Fragment;
 import eseo.pfe.sc_ihm.R;
 
@@ -15,12 +18,11 @@ public class cartographyFragment extends Fragment { //implements DopplerSensorMa
      */
 
     private View root;
+    private AlertDialog alertDialog;
 
     /*
      * Functions
      */
-
-
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -28,8 +30,14 @@ public class cartographyFragment extends Fragment { //implements DopplerSensorMa
 
         root = inflater.inflate(R.layout.fragment_cartography, container, false);
 
+
         return root;
     }
+
+
+
+
+
 
 }
 

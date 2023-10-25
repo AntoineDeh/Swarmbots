@@ -1,0 +1,31 @@
+Résumé de l'utilisation d'A* avec la distance de Manhattan
+
+Algorithme A* avec Distance de Manhattan
+Représentation de l'Espace: Utilisez une grille pour modéliser votre espace. Chaque cellule représente un point que le robot peut potentiellement atteindre.
+
+Heuristique: Utilisez la distance de Manhattan pour estimer le coût restant pour atteindre la destination depuis un point donné. 
+La formule est :
+
+Distance de Manhattan:
+d(p, q) = |px - qx| + |py - qy|
+
+où p et q sont deux points et leurs coordonnées respectives sont px, py, qx, et qy.
+
+Fonctionnement:
+
+Initialisation: Ajoutez le point de départ à une "liste ouverte" des nœuds à explorer.
+Boucle:
+- Choisissez le nœud dans la liste ouverte ayant le coût total le plus faible (coût actuel + heuristique).
+- Explorez ses voisins. Si l'un d'eux est le point d'arrivée, terminez.
+- Sinon, ajoutez les voisins non explorés à la liste ouverte et continuez.
+- Terminaison: Quand le point d'arrivée est atteint ou si la liste ouverte est vide (pas de chemin).
+- Résultat: L'algorithme A* vous donne le chemin le plus court entre le point de départ et le point d'arrivée tout en évitant les obstacles, en ne se déplaçant qu'horizontalement et verticalement.
+
+Pourquoi c'est approprié:
+- Optimalité: Il trouvera toujours le chemin le plus court car la distance de Manhattan ne surestime jamais le coût.
+- Efficacité: Il est rapide car il utilise une heuristique pour guider la recherche.
+- Convient au modèle du robot: La distance de Manhattan reflète les mouvements horizontaux et verticaux du robot.
+
+Cet algorithme est particulièrement adapté à notre cas car il s'agit d'un environnement grille avec des mouvements restreints 
+et des obstacles fixes. La distance de Manhattan est une heuristique naturelle pour un tel scénario.
+

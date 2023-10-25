@@ -1,0 +1,52 @@
+Voilà mon projet en Python :
+objectif principal : élaborer un algorithme de trajectoire optimisé dans un espace fermé ayant des obstacles.
+Le robot part d'un point A, il connait la carte et ses obstacles. Le logiciel trace une courbe dans la carte qui va du point A au point B. 
+Les points A et B sont choisit par l'utilisateur avant le dessin de la trajectoire optimale sur la carte.
+
+etape 1 : 
+a) créer un plan 2D (la carte), c'est un plan dont les dimensions longeur et largeur sont connus
+b) ajouter des obstacles à la carte : des formes géometriques simples comme des cercles, des rectangles, des carrés, triangles, trait, courbes
+
+etape 2 :
+Une fois que la carte est faite avec ses obstacles :
+a) L'utilisateur sur l'IHM clique (avec un simple clique gauche) pour placer le point A, puis fait de même pour le point B, sur la carte
+b) Le logiciel dessine la trajectoire optimale entre le point A et le point B, avec une distance minimale et en évitant les obstacles.
+
+exigences : 
+- Il ne faut pas oublier que le robot prend de la place, 
+on peut le considérer comme un ovale, avec des mesures fixés par l'utilisateur dans le code
+- Il faut aussi ajouter une marge : le robot ne doit pas froler les obstacles, cette marge est indiqué dans le code
+
+c) Il y aura peut etre plusieurs trajectoires optimales possibles, dans ce cas, il faudra que le logiciel prenne le chemin le moins risqué 
+d) Il est également possibles qu'il n'y est pas de solution, il faudra donc afficher dans une pop up "Aucune trajectoire possible"
+
+d) à tout moment on pourra reset soit : 
+- les points A et B sur la carte, l'utilisateur pourra de nouveau chosir 2 points (et enelever les deux autres points d'avant)
+- Reset la carte : les points disparaisse, une nouvelle carte alétoire est créé, on pourra de nouveau ajouter les 2 points A et B 
+pour calculer une nouvelle trajectoire
+
+
+
+
+
+
+//////////////////////////////// 
+EXIGENCES supplémentaire concernant l'IHM  :
+Dans l'interface il y a :
+++++++++En haut à gauche : la carte -> généré aléatoirement au début du programme (la carte vide)
+
+++++++à droite, les boutons de haut en bas 
+
+Les boutons de placements des obstacles
+
+un bouton placer deux points sur la carte
+un bouton dessiner trajectoire
+
+3 boutons reset : 
+reset point et trajectoire seulement
+reset obstacles seulement
+reset générale : supprime tout
+
+
+
+
