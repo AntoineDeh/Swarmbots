@@ -1,0 +1,8 @@
+{
+  "SwamBots": {
+    "logger" : {
+      "level" : "DEBUG",
+      "mode" : "android_logger"
+    }
+  }
+}

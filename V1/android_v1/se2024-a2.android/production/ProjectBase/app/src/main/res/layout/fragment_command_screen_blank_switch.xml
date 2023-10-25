@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="481dp"
+    android:layout_height="135dp"
+    android:background="#FFFFFF"
+    tools:context="project.src.view.fragments.CommandScreenBlankSwitchFragment" />

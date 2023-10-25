@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/command_screen_navigation_switch"
+    app:startDestination="@id/commandScreenBlankSwitchFragment">
+
+    <fragment
+        android:id="@+id/commandScreenBlankSwitchFragment"
+        android:name="project.src.view.fragments.CommandScreenBlankSwitchFragment"
+        android:label="fragment_command_screen_blank_switch_frangment"
+        tools:layout="@layout/fragment_command_screen_blank_switch" />
+    <fragment
+        android:id="@+id/commandScreenSwitchFragment"
+        android:name="project.src.view.fragments.CommandScreenSwitchFragment"
+        android:label="fragment_command_screen_switch"
+        tools:layout="@layout/fragment_command_screen_switch" />
+</navigation>

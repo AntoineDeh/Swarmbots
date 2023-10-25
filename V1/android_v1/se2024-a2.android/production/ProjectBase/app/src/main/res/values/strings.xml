@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">SwarmBots</string>
+    <string name="bienvenue_s">Bienvenue sur SWARMBOTS</string>
+    <string name="connexion_e">Connexion en cours...</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="toucher_ici">TOUCHER L\'ÉCRAN POUR COMMENCER</string>
+    <string name="commandes"><b>Commandes</b></string>
+    <string name="accueil"><b>Accueil</b></string>
+    <string name="logs"><b>Logs</b></string>
+    <string name="commande"><b>Commandes</b></string>
+    <string name="export"><b>Export</b></string>
+    <string name="camera">CAMERA</string>
+    <string name="radar">RADAR</string>
+    <string name="buzzer">BUZZER</string>
+    <string name="led">LED</string>
+    <string name="idrobot">ID :</string>
+    <string name="connected">Connecté</string>
+    <string name="disconnected">Déconnecté</string>
+    <string name="error_connection">Erreur de connexion au(x) Robot(s) !</string>
+    <string name="criticite_">Criticité :</string>
+    <string name="ok">Ok</string>
+    <string name="message_err">Message d\'erreur</string>
+</resources>

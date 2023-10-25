@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/command_screen_radar_navigation"
+    app:startDestination="@id/commandScreenRadarOnFragment">
+
+    <fragment
+        android:id="@+id/commandScreenRadarOnFragment"
+        android:name="project.src.view.fragments.CommandScreenRadarOnFragment"
+        android:label="fragment_command_screen_radar_on"
+        tools:layout="@layout/fragment_command_screen_radar_on" />
+    <fragment
+        android:id="@+id/commandScreenRadarOffFragment"
+        android:name="project.src.view.fragments.CommandScreenRadarOffFragment"
+        android:label="fragment_command_screen_radar_off"
+        tools:layout="@layout/fragment_command_screen_radar_off" />
+    <fragment
+        android:id="@+id/commandScreenRadarDisabledFragment"
+        android:name="project.src.view.fragments.CommandScreenRadarDisabledFragment"
+        android:label="fragment_command_screen_radar_disabled"
+        tools:layout="@layout/fragment_command_screen_radar_disabled" />
+</navigation>

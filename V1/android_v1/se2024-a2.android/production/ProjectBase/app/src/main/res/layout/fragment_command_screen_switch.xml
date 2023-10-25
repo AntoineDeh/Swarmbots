@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frame"
+    android:layout_width="481dp"
+    android:layout_height="135dp"
+    android:background="#FFFFFF"
+    tools:context="project.src.view.fragments.CommandScreenSwitchFragment" >
+
+    <Switch
+        android:id="@+id/switch_camera"
+        android:layout_width="169dp"
+        android:layout_height="48dp"
+        android:checked="true"
+        android:text="@string/camera"
+        android:textAlignment="center"
+        android:textAppearance="@style/camera"
+        android:textColor="@color/black"
+        android:thumb="@drawable/ic_thumb"
+        android:track="@drawable/ic_bg_track"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.141"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.183" />
+
+    <Switch
+        android:id="@+id/switch_radar"
+        android:layout_width="169dp"
+        android:layout_height="48dp"
+        android:checked="true"
+        android:text="@string/radar"
+        android:textAlignment="center"
+        android:textAppearance="@style/radar"
+        android:textColor="@color/black"
+        android:thumb="@drawable/ic_thumb"
+        android:track="@drawable/ic_bg_track"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.141"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.839" />
+
+    <Switch
+        android:id="@+id/switch_led"
+        android:layout_width="159dp"
+        android:layout_height="48dp"
+        android:checked="true"
+        android:text="@string/led"
+        android:textAlignment="center"
+        android:textAppearance="@style/led"
+        android:textColor="@color/black"
+        android:thumb="@drawable/ic_thumb"
+        android:track="@drawable/ic_bg_track"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.78"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.191" />
+
+    <Switch
+        android:id="@+id/switch_buzzer"
+        android:layout_width="159dp"
+        android:layout_height="48dp"
+        android:checked="true"
+        android:text="@string/buzzer"
+        android:textAlignment="center"
+        android:textAppearance="@style/buzzer"
+        android:textColor="@color/black"
+        android:thumb="@drawable/ic_thumb"
+        android:track="@drawable/ic_bg_track"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.78"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.831" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,16 @@
+{
+  "robots": [
+    {
+      "idRobot" : 1,
+      "ipAddress" : "10.3.141.48",
+      "port" : 12345,
+      "macAddress" : "b8:27:eb:bb:29:70"
+    },
+    {
+      "idRobot" : 2,
+      "ipAddress" : "10.3.141.199",
+      "port" : 12345,
+      "macAddress" : "b8:27:eb:02:1e:b1"
+    }
+  ]
+}

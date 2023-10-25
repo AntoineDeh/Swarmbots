@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="project.src.drawable.activities.HomeScreenActivity"
+    tools:ignore="MissingDefaultResource">
+
+  <!-- iPad Pro 11" - 14 -->
+  <View
+      android:id="@+id/ipad_pro_11"
+      android:layout_width="fill_parent"
+      android:layout_height="fill_parent"
+      android:background="@drawable/ipad_pro_11"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent" />
+
+  <!-- Bienvenue sur SWARMBOTS -->
+
+  <View
+      android:id="@+id/rectangle_1"
+      android:layout_width="925dp"
+      android:layout_height="98dp"
+      android:layout_alignParentStart="true"
+      android:layout_alignParentTop="true"
+      android:layout_marginBottom="556dp"
+      android:background="@drawable/rectangle_1"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent" />
+
+  <TextView
+      android:id="@+id/bienvenue_s"
+      android:layout_width="846dp"
+      android:layout_height="64dp"
+      android:layout_alignParentStart="true"
+      android:layout_alignParentTop="true"
+      android:gravity="center_horizontal|top"
+      android:text="@string/bienvenue_s"
+      android:textAppearance="@style/bienvenue_s"
+      app:layout_constraintBottom_toBottomOf="@+id/rectangle_1"
+      app:layout_constraintEnd_toEndOf="@+id/rectangle_1"
+      app:layout_constraintStart_toStartOf="@+id/rectangle_1"
+      app:layout_constraintTop_toTopOf="@+id/rectangle_1"
+      tools:ignore="TextSizeCheck" />
+
+  <!-- Connexion en cours ... -->
+  <ImageView
+      android:id="@+id/imageView4"
+      android:layout_width="355dp"
+      android:layout_height="131dp"
+      android:layout_marginTop="10dp"
+      app:layout_constraintBottom_toTopOf="@+id/rectangle_1"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.499"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="@+id/ipad_pro_11"
+      app:layout_constraintVertical_bias="0.557"
+      app:srcCompat="@drawable/logo_swarmbots"
+      tools:ignore="ContentDescription" />
+
+  <ImageView
+      android:id="@+id/imageView5"
+      android:layout_width="61dp"
+      android:layout_height="61dp"
+      android:layout_marginBottom="24dp"
+      app:layout_constraintBottom_toBottomOf="@+id/ipad_pro_11"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:srcCompat="@drawable/logo_swarmbots_a"
+      tools:ignore="ContentDescription" />
+
+  <androidx.fragment.app.FragmentContainerView
+      android:id="@+id/fragmentContainerView2"
+      android:name="androidx.navigation.fragment.NavHostFragment"
+      android:layout_width="650dp"
+      android:layout_height="469dp"
+      app:defaultNavHost="true"
+      app:layout_constraintBottom_toTopOf="@+id/imageView5"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.499"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/rectangle_1"
+      app:navGraph="@navigation/home_screen_navigation" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

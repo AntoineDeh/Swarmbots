@@ -1,0 +1,137 @@
+'''-----------------------------------------CAS D'UTILISATION-----------------------------------------'''
+
+Piloter un essaim de robots
+    #Utilisateur démarre SB_C
+    #SB_C indique qu’il est en attente de connexion à Utilisateur
+    #Utilisateur démarre SB_IHM
+    #SB_IHM affiche Ecran_Accueil
+    #SB s’initialise
+    #Utilisateur demande à afficher Ecran_Commande
+    #SB_IHM récupère Mode_Fonctionnement
+    #SB_IHM affiche Ecran_Commande
+    #Utilisateur commande un robot
+    #Utilisateur quitteSB_IHM
+
+Initialiser le système
+    #SB_IHM consulte Fichier_Config.
+    #SB_IHM choisit le premier robot défini dans Fichier_Config.
+    #SB_IHM met à jour l’état de connexion du robot dans Liste_Robots.
+    #SB_IHM initialise sa Liste_Fichiers_Logs à l'aide de Liste_Robots.
+    #SB_IHM met à jour Ecran_Accueil.
+    #SB_IHM se connecte au SB_C du robot choisi.
+    #SB_C du robot choisi réinitialise sa var_connexion à 0.
+    #SB_C du robot choisi indique qu'il est connecté à Utilisateur.
+    #SB_IHM initialise le nouveau robot connecté.
+
+Initialiser un nouveau robot connecté
+    #SB_IHM vérifie la présence de Fichier_Logs_flushed pour le robot choisi. 2. SB_IHM créer le Fichier_Logs_flushed du robot choisi.
+    #SB_IHM vérifie si une var_connexion existe pour le robot choisi.
+    #SB_IHM créer une var_connexion pour le robot choisi dans Liste_Robots. 5. SB_IHM initialise la var_connexion à 0.
+    #SB_IHM transmet l'heure de son système à SB_C.
+    #SB_C reçoit et mémorise l'heure du système de SB_IHM.
+    #SB_C synchronise l'heure de son système avec celle de SB_IHM.
+
+Commander un robot
+    #Utilisateur demande à sélectionner un robot
+    #Utilisateur sélectionne un robot.
+    #Utilisateur déplace un robot.
+
+Sélectionner un robot
+    #Utilisateur demande à sélectionner un robot    ${BTN_FLUX_VIDEO_ROBOT_1}
+    #SB_IHM mémorise le robot sélectionné
+    #SB_IHM met à jour l'affichage de Mode_Fonctionnement de Robot_Selectionne
+    #SB_IHM indique que le robot est sélectionné Utilisateur     ${RELATIVE_LAYOUT_FLUX_VIDEO_1}
+    #SB_C indique qu’il est sélectionné à Utilisateur    ${ID_ROBOT_1}
+    #SB_IHM indique le Robot_Selectionne à l'utilisateur
+    #SB_IHM autorise la commande robot à utilisateur
+    #Utilisateur demande à sélectionner un robot    ${BTN_FLUX_VIDEO_ROBOT_1}
+    #SB_IHM mémorise le robot sélectionné
+    #SB_IHM met à jour l'affichage de Mode_Fonctionnement de Robot_Selectionne
+
+    #SB_C indique qu'il est sélectionné à l'utilisateur
+    #SB_IHM indique le Robot_Selectionne à l'utilisateur
+    #SB_IHM autorise la commande robot à utilisateur
+
+Déplacer un robot
+    #Utilisateur demande à déplacer Robot_Selectionne
+    #SB_IHM indique la cmd_deplacement à Utilisateur
+    #SB_IHM transmet la cmd_deplacement à SB_C
+    #SB_C acquitte la commande à SB_IHM
+    #SB_C execute le déplacement cmd_deplacement
+    #Utilisateur demande à stopper Robot_Selectionne
+    #SB_IHM indique la cmd_arret à Utilisateur
+    #SB_IHM transmet la cmd_arret à SB_C
+    #SB_C acquitte la commande à SB_IHM
+    #SB_C exécute le déplacement cmd_arret
+
+Modifier Mode_Fonctionnement
+    #Utilisateur demande à modifier Mode_Fonctionnement de Robot_Selectionne
+    #SB_IHM mémorise Mode_Fonctionnement.
+    #SB_IHM demande à mettre à jour Mode_Fonctionnement de SB_C
+    #SB_C mémorise Mode_Fonctionnement
+    #SB_C applique la modification de Mode_Fonctionnement
+    #SB_IHM met à jour Ecran_Commande
+
+Vérifier la présence d'un obstacle
+    #SB_C récupère son Mode_Fonctionnement radar.
+    #SB_C vérifie la présence d'un obstacle.
+    #SB_C transmet l'état de son flux radar a SB_IHM.
+    #SB_IHM enregistre l'état du flux radar du SB_C concerné.
+
+Rafraichir Ecran_Commande
+    #SB_IHM consulte Liste_Robots.
+    #SB_IHM choisit le premier robot connecté dans Liste_Robots.
+    #SB_IHM consulte Mode_Fonctionnement radar de robot choisi.
+    #SB_IHM récupère le dernier état du radar du robot choisi.
+    #SB_IHM met à jour le voyant radar de robot choisi sur Ecran_Commande.
+    #SB_IHM consulte Mode_Fonctionnement camera de robot choisi.
+    #SB_IHM récupère la dernière image du flux camera de robot choisi.
+    #SB_IHM met à jour le flux camera de robot choisi sur Ecran_Commande.
+
+Transmettre flux caméra
+    #SB_C récupère son Mode_Fonctionnement caméra.
+    #SB_C envoie son flux caméra à SB_IHM.
+    #SB_IHM enregistre le flux caméra.
+
+Vérifier Connexion
+    #SB_IHM consulte Liste_Robots.
+    #SB_IHM choisit le premier robot connecté dans Liste_Robots.
+    #SB_IHM envoie I_AM_HERE au SB_C du robot choisi.
+    #SB_C du robot choisi reçoit I_AM_HERE et met à jour sa var_connexion à 0.
+    #SB_C du robot choisi acquitte la reception à SB_IHM.
+    #SB_IHM reçoit l'acquittement et met à jour la var_connexion correspondante au robot choisi à 0.
+
+Consulter les logs
+    #Utilisateur demande à afficher Ecran_Logs
+    #SB_IHM affiche Ecran_Logs
+    #Utilisateur sélectionne la Source_Logs des logs qu'il souhaite consulter
+    #SB_IHM flush les logs du SB_C lié au Source_Logs
+    #SB_IHM met à jour Ecran_Logs
+
+Flusher les logs
+    #SB_IHM demande à récupérer les logs du SB_C concerné.
+    #SB_C envoie ses logs à SB_IHM.
+    #SB_IHM enregistre les nouveaux logs de SB_C dans son Fichier_Logs_flushed correspondant au SB_C concerné.
+    #SB_IHM acquitte l'enregistrement des logs à SB_C.
+    #SB_C efface les logs envoyés de sa mémoire.
+
+Exporter les logs
+    #SB_IHM affiche Explorateur_OS_Android.
+    #Utilisateur choisit un emplacement mémoire pour l'export.
+    #Explorateur_OS_Android effectue l'export.
+    #SB_IHM ferme Explorateur_OS_Android.
+
+Journaliser un évènement
+    #SB_C vérifie que Mémoire_Min est suffisante pour stocker les prochains logs.
+    #SB_C enregistre et date le nouveau log dans Fichier_Logs_SB_C
+
+Quitter SB_IHM
+    #Utilisateur demande à quitter SB_IHM.
+    #SB_IHM consulte Liste_Robots.
+    #SB_IHM choisit le premier robot connecté de Liste_Robots.
+    #SB_IHM demande la fin de communication au SB_C du robot choisi.
+    #SB_C du robot choisi confirme la fin de communication à SB_IHM.
+    #SB_C du robot choisi exécute le déplacement cmd_arret.
+    #SB_C du robot choisi indique qu’il est en attente de connexion.
+    #SB_IHM met à jour l'état de connexion du robot choisi dans Liste_Robots.
+    #SB_IHM s’arrête.

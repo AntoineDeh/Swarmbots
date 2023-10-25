@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ecran_principal_navigation"
+    app:startDestination="@id/ecranPrincipalFragment">
+    <fragment
+        android:id="@+id/ecranPrincipalFragment"
+        android:name="project.src.view.fragments.HomeScreenWaitingConnectionFragment"
+        android:label="fragment_ecran_principal"
+        tools:layout="@layout/fragment_home_screen_waiting_connection" />
+    <fragment
+        android:id="@+id/ecranPrincipal2Fragment"
+        android:name="project.src.view.fragments.HomeScreenRobotConnectedFragment"
+        android:label="fragment_ecran_principal2"
+        tools:layout="@layout/fragment_home_screen_robot_connected" />
+    <fragment
+        android:id="@+id/homeScreenErrorConnectingRobots"
+        android:name="project.src.view.fragments.HomeScreenErrorConnectingRobots"
+        android:label="fragment_home_screen_error_connecting_robots"
+        tools:layout="@layout/fragment_home_screen_error_connecting_robots" />
+</navigation>

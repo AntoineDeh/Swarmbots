@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/command_screen_camera_navigation"
+    app:startDestination="@id/commandScreenBlankCameraFragment">
+
+    <fragment
+        android:id="@+id/commandScreenBlankCameraFragment"
+        android:name="project.src.view.fragments.CommandScreenCameraRobot1Fragment"
+        android:label="fragment_command_screen_blank_camera"
+        tools:layout="@layout/fragment_command_screen_camera_robot1" />
+    <fragment
+        android:id="@+id/commandScreenCameraOFFFragment"
+        android:name="project.src.view.fragments.CommandScreenCameraOFFFragment"
+        android:label="fragment_command_screen_camera_o_f_f"
+        tools:layout="@layout/fragment_command_screen_camera_o_f_f" />
+    <fragment
+        android:id="@+id/commandScreenCameraRobot2Fragment"
+        android:name="project.src.view.fragments.CommandScreenCameraRobot2Fragment"
+        android:label="fragment_command_screen_camera_robot2"
+        tools:layout="@layout/fragment_command_screen_camera_robot2" />
+</navigation>

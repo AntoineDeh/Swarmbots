@@ -1,0 +1,7 @@
+<root>
+    <item name='androidx.appcompat.app.AppCompatActivity void setContentView(int)'>
+        <annotation name='org.jetbrains.annotations.Contract'>
+            <val val="&quot;_ -&gt; _&quot;" />
+        </annotation>
+    </item>
+</root>

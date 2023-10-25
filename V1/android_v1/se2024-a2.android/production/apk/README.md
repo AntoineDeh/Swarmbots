@@ -1,0 +1,1 @@
+Pour consulter les ip définies dans le binaire, renommez le fichier apk en zip puis décompressez le. Le fichier de configuration FileConfig.json contenant les IP se trouve à la racine dans le répertoire assets.

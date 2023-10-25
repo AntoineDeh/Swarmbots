@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="joystick_layout" type="id" />
+    <item name="x_text_view" type="id" />
+    <item name="y_text_view" type="id" />
+</resources>

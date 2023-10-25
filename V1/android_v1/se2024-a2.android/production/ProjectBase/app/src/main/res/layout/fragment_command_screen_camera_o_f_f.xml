@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="596dp"
+    android:layout_height="391dp"
+    android:background="#FFFFFF"
+    tools:context="project.src.view.fragments.CommandScreenCameraOFFFragment">
+
+    <RelativeLayout
+        android:id="@+id/frame_camera_off"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/frame_5">
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="328dp"
+            android:layout_height="158dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="116dp"
+            android:layout_marginTop="116dp"
+            android:layout_marginEnd="116dp"
+            android:layout_marginBottom="116dp"
+            android:src="@drawable/logo_swarmbots" />
+    </RelativeLayout>
+</FrameLayout>

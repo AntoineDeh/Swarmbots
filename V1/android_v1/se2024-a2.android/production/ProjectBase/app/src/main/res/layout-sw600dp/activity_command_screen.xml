@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context="project.src.view.activities.CommandScreenActivity"
+    tools:ignore="MissingDefaultResource">
+
+    <View
+        android:id="@+id/ipad_pro_11"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@drawable/ipad_pro_11"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="355dp"
+        android:layout_height="131dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/ipad_pro_11"
+        app:srcCompat="@drawable/logo_swarmbots"
+        tools:ignore="ContentDescription" />
+
+    <Button
+        android:id="@+id/frame_67"
+        android:layout_width="287dp"
+        android:layout_height="71dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/button"
+        android:onClick="onClickHomeScreenActivity"
+        android:text="@string/accueil"
+        android:textAppearance="@style/accueil"
+        app:layout_constraintEnd_toStartOf="@+id/imageView4"
+        app:layout_constraintHorizontal_bias="0.28"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+    </Button>
+
+    <Button
+        android:id="@+id/frame_68"
+        android:layout_width="287dp"
+        android:layout_height="71dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/button"
+        android:onClick="onClickLogsScreenActivity"
+        android:text="@string/logs"
+        android:textAppearance="@style/logs"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.72"
+        app:layout_constraintStart_toEndOf="@+id/imageView4"
+        app:layout_constraintTop_toTopOf="parent">
+    </Button>
+
+    <RelativeLayout
+        android:id="@+id/cache_frame5"
+        android:layout_width="614dp"
+        android:layout_height="408dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.028"
+        app:layout_constraintStart_toStartOf="@+id/ipad_pro_11"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.44"
+        android:background="@drawable/frame_5_cache">
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/cache_frame6"
+        android:layout_width="614dp"
+        android:layout_height="408dp"
+        android:background="@drawable/frame_5_cache"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.972"
+        app:layout_constraintStart_toStartOf="@+id/ipad_pro_11"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.44"></RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/frame_5"
+        android:layout_width="596dp"
+        android:layout_height="391dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="28dp"
+        android:clipToOutline="true"
+        android:visibility="visible"
+        android:background="@drawable/frame_5"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.442"
+        tools:visibility="visible">
+
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/fragmentContainerView"
+            android:name="androidx.navigation.fragment.NavHostFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:onClick="onClickScreenCameraLeft"
+            app:defaultNavHost="true"
+            app:navGraph="@navigation/command_screen_camera_navigation" />
+
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/fragmentContainerView3"
+            android:name="androidx.navigation.fragment.NavHostFragment"
+            android:layout_width="136dp"
+            android:layout_height="136dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="242dp"
+            android:layout_marginEnd="450dp"
+            android:layout_marginBottom="13dp"
+            app:defaultNavHost="true"
+            app:navGraph="@navigation/command_screen_radar_navigation" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/frame_6"
+        android:layout_width="596dp"
+        android:layout_height="391dp"
+        android:layout_marginEnd="28dp"
+        android:background="@drawable/frame_5"
+        android:clipToOutline="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.442">
+
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/fragmentContainerView5"
+            android:name="androidx.navigation.fragment.NavHostFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:onClick="onClickScreenCameraRight"
+            app:defaultNavHost="true"
+            app:navGraph="@navigation/command_screen_camera_navigation" />
+
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/fragmentContainerView4"
+            android:name="androidx.navigation.fragment.NavHostFragment"
+            android:layout_width="136dp"
+            android:layout_height="136dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="242dp"
+            android:layout_marginEnd="450dp"
+            android:layout_marginBottom="13dp"
+            app:defaultNavHost="true"
+            app:navGraph="@navigation/command_screen_radar_navigation" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="61dp"
+        android:layout_height="61dp"
+        android:layout_marginBottom="24dp"
+        app:layout_constraintBottom_toBottomOf="@+id/ipad_pro_11"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/logo_swarmbots_a"
+        tools:ignore="ContentDescription" />
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragmentContainerView2"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="481dp"
+        android:layout_height="135dp"
+        android:layout_marginBottom="52dp"
+        app:defaultNavHost="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.087"
+        app:layout_constraintStart_toStartOf="parent"
+        app:navGraph="@navigation/command_screen_switch_navigation" />
+
+    <TextView
+        android:id="@+id/commandes"
+        android:layout_width="199dp"
+        android:layout_height="64dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="20dp"
+        android:gravity="center_horizontal|top"
+        android:text="@string/commandes"
+        android:textAppearance="@style/commandes"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/ipad_pro_11"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/ipad_pro_11"
+        app:layout_constraintVertical_bias="0.155"
+        tools:visibility="visible" />
+
+    <RelativeLayout
+        android:id="@+id/frame_8"
+        android:layout_width="290dp"
+        android:layout_height="29dp"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/frame_8"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/ipad_pro_11"
+        app:layout_constraintHorizontal_bias="0.028"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.739" >
+
+        <include
+            android:id="@+id/robot1Id"
+            layout="@layout/command_screen_show_id_connection"
+            android:layout_width="270dp"
+            android:layout_height="25dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="2dp"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/frame_82"
+        android:layout_width="290dp"
+        android:layout_height="29dp"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/frame_8"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/ipad_pro_11"
+        app:layout_constraintHorizontal_bias="0.663"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.739" >
+
+        <include
+            android:id="@+id/robot2Id"
+            layout="@layout/command_screen_show_id_connection"
+            android:layout_width="270dp"
+            android:layout_height="25dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="2dp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/commandBtns_circle"
+        android:layout_width="215dp"
+        android:layout_height="215dp"
+        android:layout_marginEnd="70dp"
+        android:background="@drawable/black_circle"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.989">
+
+        <RelativeLayout
+            android:id="@+id/commandBtns"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="-1dp">
+
+
+            <Button
+                android:id="@+id/btnForward"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="11dp"
+                android:background="@drawable/arrow_up"
+                android:text=" "></Button>
+
+            <Button
+                android:id="@+id/btnBackward"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="154dp"
+                android:layout_marginBottom="6dp"
+                android:background="@drawable/arrow_up"
+                android:rotation="180"></Button>
+
+            <Button
+                android:id="@+id/btnLeft"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="11dp"
+                android:layout_marginLeft="11dp"
+                android:background="@drawable/arrow_up"
+                android:rotation="-90"></Button>
+
+            <Button
+                android:id="@+id/btnRight"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="152dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/arrow_up"
+                android:rotation="90"></Button>
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
