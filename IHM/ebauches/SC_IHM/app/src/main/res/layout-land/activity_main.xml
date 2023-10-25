@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragmentCartography"
+        android:name="eseo.pfe.sc_ihm.GUI.cartographyFragment"
+        android:layout_width="394dp"
+        android:layout_height="401dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintHorizontal_weight="3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        tools:layout="@layout/fragment_cartography" />
+
+    <Button
+        android:id="@+id/resetID"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="28dp"
+        android:layout_marginEnd="16dp"
+        android:backgroundTint="@color/orange"
+        android:text="Reset"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/stopID"
+        app:layout_constraintTop_toTopOf="@+id/stopID" />
+
+    <Button
+        android:id="@+id/stopID"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="28dp"
+        android:layout_marginEnd="16dp"
+        android:backgroundTint="@color/red"
+        android:text="Stop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/trajectoireID"
+        android:layout_width="208dp"
+        android:layout_height="48dp"
+        android:text="Trajectoire"
+        android:backgroundTint="#00008B"
+        app:layout_constraintBottom_toTopOf="@+id/stopID"
+        app:layout_constraintEnd_toEndOf="@+id/CartID"
+        app:layout_constraintStart_toStartOf="@+id/CartID"
+        app:layout_constraintTop_toBottomOf="@+id/CartID"
+        app:layout_constraintVertical_bias="0.137" />
+
+    <Button
+        android:id="@+id/CartID"
+        android:layout_width="204dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="48dp"
+        android:layout_marginTop="48dp"
+        android:backgroundTint="#00008B"
+        android:text="Cartographie"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.894"
+        app:layout_constraintStart_toEndOf="@+id/fragmentCartography"
+        app:layout_constraintTop_toBottomOf="@+id/thalesText" />
+
+
+    <ImageView
+        android:id="@+id/thalesText"
+        android:layout_width="285dp"
+        android:layout_height="115dp"
+        app:layout_constraintStart_toEndOf="@+id/fragmentCartography"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/thales" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/quitter" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
